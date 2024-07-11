@@ -1,0 +1,44 @@
+﻿@model CustomerRegistrationForm.Models.Customer
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<h2>Customer Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.city_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.city_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dated)
+        </dd>
+    </dl>
+</div>

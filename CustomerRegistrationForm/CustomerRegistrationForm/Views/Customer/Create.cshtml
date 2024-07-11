@@ -1,0 +1,49 @@
+﻿@model CustomerRegistrationForm.Models.Customer
+
+@{
+    ViewData["Title"] = "Create Customer";
+}
+
+<h2>Create Customer</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="CustomerName" class="control-label"></label>
+        <input asp-for="CustomerName" class="form-control" />
+        <span asp-validation-for="CustomerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="city_id" class="control-label"></label>
+        <select asp-for="city_id" class="form-control">
+            <option value="">Select City</option>
+            <option value="1">New York</option>
+            <option value="2">Los Angeles</option>
+            <option value="3">Chicago</option>
+            <option value="4">Houston</option>
+            <option value="5">San Francisco</option>
+        </select>
+        <span asp-validation-for="city_id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender" class="control-label"></label>
+        <select asp-for="Gender" class="form-control">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Details" class="control-label"></label>
+        <textarea asp-for="Details" class="form-control"></textarea>
+        <span asp-validation-for="Details" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
